@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-weight: 200;
+  color: #68b;
+}
+
+.app {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #eee;
+  padding: 2em;
+}
+
+header, nav, footer, section.dashboard, aside {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+footer {
+  padding: 0.5em;
+  background-color: pink;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+nav {
+  padding-bottom: 1em;
+  font-size: 1.2em;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+
+    li {
+      padding: 0 0 0.1em 0;
+      margin: 0 1em 0 0;
+
+      &.active {
+        border-bottom: 3px solid #0bf;
+      }
+
+      &:last-child {
+        // margin-right: 0;
+      }
+    }
+  }
+}
+
+.dashboard {
+  display: flex;
+  flex-flow: row wrap;
+
+  article {
+    flex: 1;
+    margin-right: 2em;
+  }
+
+  aside {
+    position: absolute;
+    font-size: 0.7em;
+    padding: 2em;
+    background-color: #ddd;
+    border: 1px solid #333;
+    z-index: 1;
+    box-shadow: 0 1em 5em rgba(0,0,0,0.5);
+    margin-bottom: 3em;
+    display: flex;
+    flex-flow: row wrap;
+    top: 100%;
+    // display: none;
+
+    section {
+      flex: 1;
+      margin-right: 2em;
+    }
+  }
+}
+
+aside {
+
+}
+
